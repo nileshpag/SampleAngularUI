@@ -1,0 +1,33 @@
+<table>
+               
+                <tr>
+                    <th colspan="2">Add/Edit country</th>
+                 </tr>
+                <tr>
+                    <td>Movie</td>
+                    <td><input type="text" ng-model="countryForm.movieName" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" ng-click="addCountry()" value="submit" class="blue-button" /></td>
+                </tr>
+ </table>
+ <table>
+               
+                <tr>
+                    <th colspan="2">ID</th>
+					<th colspan="2">Movie</th>
+                </tr>
+				<tr ng-repeat="c in countries ">
+                    <td colspan="2">{{c.id}}</td>
+					<td colspan="2">{{c.movieName}}</td>
+					<td colspan="2"><input type="button" ng-click="editCountry(c)" value="edit" class="blue-button" /></td>
+					<td colspan="2"><input type="button"  ng-click="deleteCountry(c.id)" value="delete"  class="blue-button" /></td>
+                </tr>
+				<tr>
+                    <td colspan="2"><input type="button" ng-click="clickbuttton()" value="submit" class="blue-button" /></td>
+                </tr>
+				<tr>
+                    <td colspan="2">{{cnt}}</td>
+                </tr>
+                
+ </table>
